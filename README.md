@@ -103,9 +103,9 @@ The MCP server exposes three main tools:
 
 To interact with this MCP server through Claude desktop:
 
-- "Store these job listings: Software Engineer, Product Manager, Data Scientist"
-- "Format the following job listings with timestamps: Junior Developer, Senior Developer"
-- "Show me all the job listings I've previously saved"
+- "Store these job listings: Software Engineer, Product Manager, Data Scientist by searching for them using my Pica connection with Firecrawl"
+- "Format the following job listings with timestamps: Junior Developer, Senior Developer, and then store them into a page in Notion, using my Pica connection"
+- "Show me all the job listings I've previously saved in Notion"
 
 ## Troubleshooting
 
