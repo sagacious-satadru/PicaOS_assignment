@@ -1,0 +1,45 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Project-specific files
+job-log.txt
+*.txt
+!requirements.txt
+
+# IDE files
+.vscode/
+
+
+# Environment variables
+.env
+.env.*
+
+# Operating system files
+.DS_Store
+Thumbs.db
+.directory
+
+# Log files
+*.log
+
+# Database files
+*.db
+*.sqlite3
+
+# Local configuration
+config.local.json
+claude_desktop_config.json
