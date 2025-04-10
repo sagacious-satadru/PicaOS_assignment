@@ -50,8 +50,6 @@ This will start the server with stdio transport, ready to communicate with Claud
 
 ### Adding to Claude Desktop
 
-    Feel free to modify and use it as needed. No warranty is provided, and the author is not responsible for any issues that may arise from its use.
-
 1. Add the Pica MCP server to Claude desktop by following the instructions posted at `https://docs.picaos.com/sdk/anthropic-mcp`.
 
 1. Open Claude Desktop application
