@@ -2,6 +2,15 @@
 
 A Model Control Protocol (MCP) server that provides tools for managing job listings on your local file system. This server is designed to work with Claude desktop, allowing Claude to interact with your local files through the MCP protocol.
 
+## Flow of things:
+1. Create a Pica OS account
+2. Add a Firecrawl connection at `https://app.picaos.com/connections` (Prerequisite: A Firecrawl API would be required and it can be obtained for free from `https://www.firecrawl.dev/` after creating a free Firecrawl account)
+3. Add a Notion connection at `https://app.picaos.com/connections` (Prerequisite: One needs to create a free Notion account --> then proceed to create an integration at `https://www.notion.so/profile/integrations` --> then create a Notion page and add this integration as a connection)
+
+The connection option can be found by clicking on the 3 horizontal dots on the top right and then scrolling down to the following:
+
+![Notion page connection](Notion_connection_option.png "Notion page connection")
+
 ## Overview
 
 This project implements an MCP server with tools to:
