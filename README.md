@@ -1,11 +1,12 @@
 # Job Management MCP Server
 
-A Model Control Protocol (MCP) server that provides tools for managing job listings on your local file system. This server is designed to work with Claude desktop, allowing Claude to interact with your local files through the MCP protocol.
+A Model Control Protocol (MCP) server that provides tools for managing job listings on your local file system. This server is designed to work with Claude desktop, allowing Claude to interact with your local files through the MCP protocol. It uses Pica mcp server's
+Firecrawl and Notion connections to automate the workflow of scraping the web for job descriptions and storing it.
 
 ## Flow of things:
 1. Create a Pica OS account
 2. Add a Firecrawl connection at `https://app.picaos.com/connections` (Prerequisite: A Firecrawl API would be required and it can be obtained for free from `https://www.firecrawl.dev/` after creating a free Firecrawl account)
-3. Add a Notion connection at `https://app.picaos.com/connections` (Prerequisite: One needs to create a free Notion account --> then proceed to create an integration at `https://www.notion.so/profile/integrations` --> then create a Notion page and add this integration as a connection)
+3. Add a Notion connection at `https://app.picaos.com/connections` (Prerequisite: Create a free Notion account --> then create an integration at `https://www.notion.so/profile/integrations` --> then create a Notion page and add this integration as a connection)
 
 The connection option can be found by clicking on the 3 horizontal dots on the top right and then scrolling down to the following:
 
@@ -18,6 +19,7 @@ This project implements an MCP server with tools to:
 - Store job listings in local text files
 - Read job listings from files
 - Format job listings with optional timestamps
+- Makes use of Pica's Firecrawl to scrape the web for job openings and Notion connections to store the details in a notion page
 
 ## Installation
 
@@ -25,6 +27,7 @@ This project implements an MCP server with tools to:
 
 - Python 3.8 or higher
 - [uv](https://github.com/astral-sh/uv) package manager
+- PicaOs account
 
 ### Setup
 
@@ -52,7 +55,7 @@ uv pip install -r requirements.txt
 Run the MCP server:
 
 ```bash
-python main.py
+mcp dev main.py
 ```
 
 This will start the server with stdio transport, ready to communicate with Claude desktop.
