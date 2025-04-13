@@ -1,7 +1,7 @@
 from mcp.server.fastmcp import FastMCP
 import datetime
 from pathlib import Path
-from typing import List, Optional, Union
+from typing import List, Optional
 
 mcp = FastMCP()
 
