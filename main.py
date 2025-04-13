@@ -20,12 +20,9 @@ def write_to_file(jobs: List[str], filename: str = "job-log.txt", mode: str = "w
     Raises:
         IOError: If there's an issue writing to the file
     """
-    try:
-        with open(filename, mode) as file:
-            file.writelines(jobs)
-        return filename
-    except IOError as e:
-        return f"Error writing to file: {str(e)}"
+    with open(filename, mode) as file:
+        file.writelines(jobs)
+    return filename
 
 def read_from_file(filename: str = "job-log.txt") -> List[str]:
     """
@@ -63,10 +60,11 @@ def store_jobs(jobs: List[str], filename: Optional[str] = None, append: bool = F
     output_file = filename or "job-log.txt"
     mode = "a" if append else "w"
     
-    result = write_to_file(jobs, output_file, mode)
-    if result.startswith("Error"):
-        return result
-    return f"Success: All jobs are successfully written to local file: {result}"
+    try:
+        result = write_to_file(jobs, output_file, mode)
+        return f"Success: All jobs are successfully written to local file: {result}"
+    except IOError as e:
+        return f"Error writing to file: {str(e)}"
 
 @mcp.tool()
 def structure_jobs(jobs: List[str], add_timestamp: bool = False) -> List[str]:
